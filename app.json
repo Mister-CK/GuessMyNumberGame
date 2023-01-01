@@ -1,32 +1,31 @@
 {
   "expo": {
-    "name": "RNCourse",
+    "name": "guessmynumbergame",
     "slug": "guessmynumbergame",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "orientation": "default",
+    "icon": "./assets/images/mountainIcon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/mountainIcon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ddb52f"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "foregroundImage": "./assets/images/mountainIcon.png",
+        "backgroundColor": "#ddb52f"
+      },
+      "package": "com.mister_ck.guessmynumbergame"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/images/mountainIcon.png"
     },
     "extra": {
       "eas": {
