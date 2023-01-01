@@ -7,7 +7,6 @@ const Card = ({ children }) => {
 export default Card;
 
 const deviceWidth = Dimensions.get("window").width;
-const deviceHeigth = Dimensions.get("window").heigth;
 
 const styles = StyleSheet.create({
   card: {

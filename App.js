@@ -2,11 +2,12 @@ import {
   StyleSheet,
   ImageBackground,
   SafeAreaView,
-  StatusBar,
+  Platform,
 } from "react-native";
 import { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { useFonts } from "expo-font";
+import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import StartGameScreen from "./screens/StartGameScreen.js";
 import GameScreen from "./screens/GameScreen";
@@ -55,27 +56,30 @@ export default function App() {
     );
   }
   return (
-    <LinearGradient
-      style={styles.rootScreen}
-      colors={[Colors.primary700, Colors.accent500]}
-    >
-      <ImageBackground
-        source={require("./assets/images/backgroundImageGuessingGame.png")}
-        resizeMode="cover"
+    <>
+      <StatusBar style="light" />
+      <LinearGradient
         style={styles.rootScreen}
-        imageStyle={styles.backgroundImage}
+        colors={[Colors.primary700, Colors.accent500]}
       >
-        <SafeAreaView style={styles.safeAreaViewForAndroid}>
-          {screen}
-        </SafeAreaView>
-      </ImageBackground>
-    </LinearGradient>
+        <ImageBackground
+          source={require("./assets/images/backgroundImageGuessingGame.png")}
+          resizeMode="cover"
+          style={styles.rootScreen}
+          imageStyle={styles.backgroundImage}
+        >
+          <SafeAreaView style={styles.safeAreaViewForAndroid}>
+            {screen}
+          </SafeAreaView>
+        </ImageBackground>
+      </LinearGradient>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   safeAreaViewForAndroid: {
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    paddingTop: Platform.OS === "android" ? 10 : 0,
     flex: 1,
   },
   rootScreen: {
